@@ -1,0 +1,101 @@
+.wrapper{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: url('/assets/images/pexels-lorenzo-242236.jpg') center center/cover no-repeat;
+width: 100%;
+height: 100vh;
+}
+#login{    
+    position: relative;
+    width: 379px;
+    margin: 0 auto;
+    background: rgba(245,241,232,.4);
+    /* background: rgba(119,119,198,.4); */
+    padding: 55px 20px 20px;
+    text-align: center;
+    border-radius: 0;
+    box-shadow: 0 3px 49px #000;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+#login .logo{
+    position: absolute;
+    top: 10px;
+    width: 200px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+#login label{
+    text-align: center;
+    color: #000;
+    font-size: 19px;
+    margin-top: 15px;
+    clear: both;
+    display: block !important;
+    line-height: 2;
+}
+#login .form-control  {
+    position: relative;
+}
+#login .form-control .invalid-feedback {
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    color: red;
+    font-size: 11px;
+}
+#login .form-control input{
+    display: block;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0);
+    border: 0;
+    border-bottom: 1px solid #000;
+    color: #000;
+    font-size: 13px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+#login .form-control input[type="submit"]{
+    
+    background: #fff;
+    border: none;
+    color: #d91a5e;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: Montserrat;
+    margin-top: 35px;
+    
+}
+#login .form-control > div{
+    display: block;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+#login .form-control > div::before{
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    content: "";
+    left: 0;
+    bottom: 0;
+}
+#login .form-control > div::after{
+    position: absolute;
+    height: 0%;
+    border-right: 1px solid #000;
+    content: "";
+    right: 0;
+    top: 0;
+}

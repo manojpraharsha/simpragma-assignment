@@ -1,0 +1,27 @@
+header{
+    padding: 5px ;
+    color: #fff;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    background-color: #f5f1e8;
+}
+header .logo{
+    float: left;
+    width: 248px;
+}
+
+header .logo a{
+    display: block;
+} 
+header .sideIcons{
+    float: right;
+    margin-top: 15px;
+}
+header .sideIcons > div{
+    float: left;
+}
+header .sideIcons > div:last-child{
+    margin-left: 10px;
+}
+header .sideIcons > div a{ display: block;}

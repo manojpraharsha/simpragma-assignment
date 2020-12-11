@@ -1,0 +1,40 @@
+<main>
+    <div class="wrapper">
+        <div id="login">
+            <div class="logo"><a href=""><img src="./assets/images/sim-wings-logo.png" alt=""></a></div>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-control">
+                    <label for="userName">User Name</label>
+                    <div>
+                        <input type="text" id="userName" name="userName"
+                            placeholder="Please Enter Your Email-id/Username" formControlName="userName" required>
+                        <span class="invalid-feedback" *ngIf="submitted && myForm.userName.errors?.required">
+                            Enter your email.
+                        </span>
+                        <span class="invalid-feedback" *ngIf="submitted && myForm.userName.errors?.pattern">
+                            Enter valid email.
+                        </span>
+                        <span class="invalid-feedback" *ngIf="submitted && userNameError">
+                            User name does not Exist
+                        </span>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="*******"
+                        formControlName="password" required>
+                    <span class="invalid-feedback" *ngIf="submitted && passwordError">
+                        Please check your password and try again!
+                    </span>
+
+
+                </div>
+                <div class="form-control">
+                    <div>
+                        <input type="submit" value="Login" style="cursor: pointer;">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

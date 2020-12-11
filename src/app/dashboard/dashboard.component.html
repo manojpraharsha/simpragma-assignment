@@ -1,0 +1,62 @@
+<app-header></app-header>
+<main>
+    <aside>
+        <ul>
+            <li class="tabs-link" data-tab="" (click)="changeTab('tab-info')"><a>Info</a></li>
+            <li class="tabs-link" data-tab="" (click)="changeTab('tab-posts')"><a>Posts</a></li>
+            <!-- <li class="tabs-link" data-tab="tab-todos"><a>Todos</a></li>
+            <li class="tabs-link" data-tab="tab-album"><a>Album</a></li> -->
+        </ul>
+    </aside>
+    <article>
+        <div id="tabs">
+            <div id="tab-info" class="tabs active">
+                <h1>Deatils</h1>
+                <ul>
+                    <li><strong>Name </strong>{{userDetail.name}}</li>
+                    <li><strong>Email </strong>{{userDetail.email}}</li>
+                    <li><strong>Address</strong>
+                        <ul>
+                            <li><span>Street</span> {{userDetail.address.street}}</li>
+                            <li><span>Suite</span> {{userDetail.address.suite}}</li>
+                            <li><span>City</span> {{userDetail.address.city}} </li>
+                            <li><span>Zipcode</span> {{userDetail.address.zipcode}} </li>
+                        </ul>
+                    </li>
+                    <li><strong>Phone</strong> {{userDetail.phone}}</li>
+                    <li><strong>Website</strong> {{userDetail.website}}</li>
+                    <li><strong>Company</strong>
+                        <ul>
+                            <li><span>Name</span>{{userDetail.company.name}}</li>
+                            <li><span>CatchPhrase</span>{{userDetail.company.catchPhrase}}</li>
+                            <li><span>Bs</span>{{userDetail.company.bs}}</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab-posts" class="tabs">
+                <div class="posts">
+                    <div *ngFor="let data of postDetail" class="post">
+                        <h2>{{data.title}}</h2>
+                        <p>{{data.body}}</p>
+                        <h3>Comments</h3>
+                        <div class="comments">
+                            <div *ngFor="let comment of data.comments" class="comment">
+                                <p>"{{comment.body}}"</p>
+                                <span>~{{comment.name}}</span>
+                                <span class="">{{comment.email}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="tab-todos" class="tabs">
+
+        </div>
+        <div id="tab-album" class="tabs">
+
+        </div> -->
+
+    </article>
+</main>
